@@ -1,6 +1,8 @@
+import java.time.LocalDate;
+
 public class Main {
 
-  public static void definingALeapYear(int year) {
+  public static void definingLeapYear(int year) {
     int beginning = 1584;
     if (year < beginning) {
       System.out.println("тогда ещё не учитывались високосные года");
@@ -12,15 +14,16 @@ public class Main {
   }
 
   public static void definingTheVersion(int Os, int DeviceYear) {
+    int currentYear = LocalDate.now().getYear();
 
-    if (Os == 0 && DeviceYear < 2015) {
+    if (Os == 0 && DeviceYear < currentYear) {
       System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-    } else if (Os == 0 && DeviceYear >= 2015) {
+    } else if (Os == 0 && DeviceYear >= currentYear) {
       System.out.println("Установите версию приложения для iOS по ссылке");
     }
-    if (Os == 1 && DeviceYear < 2015) {
+    if (Os == 1 && DeviceYear < currentYear) {
       System.out.println("Установите облегченную версию приложения для андроид по ссылке");
-    } else if (Os == 1 && DeviceYear >= 2015) {
+    } else if (Os == 1 && DeviceYear >= currentYear) {
       System.out.println("Установите версию приложения для андроид по ссылке");
     }
   }
@@ -49,13 +52,13 @@ public class Main {
 
   public static void main(String[] args) {
     int year = 1988;
-    definingALeapYear(year);
+    definingLeapYear(year);
 
-    int os = 0;
-    int deviseYear = 2010;
+    int os = 1;
+    int deviseYear = 2023;
     definingTheVersion(os, deviseYear);
 
-    int distance = 150;
+    int distance = 70;
     deliver(distance);
 
   }
