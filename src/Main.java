@@ -1,6 +1,6 @@
 public class Main {
 
-  public static void leapYear(int year) {
+  public static void definingALeapYear(int year) {
     int beginning = 1584;
     if (year < beginning) {
       System.out.println("тогда ещё не учитывались високосные года");
@@ -11,26 +11,26 @@ public class Main {
     }
   }
 
-  public static void applicationVersion(int Os, int DeviceYear) {
-    {
-      if (Os == 0 && DeviceYear < 2015) {
-        System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-      } else if (Os == 0 && DeviceYear >= 2015) {
-        System.out.println("Установите версию приложения для iOS по ссылке");
-      }
-      if (Os == 1 && DeviceYear < 2015) {
-        System.out.println("Установите облегченную версию приложения для андроид по ссылке");
-      } else if (Os == 1 && DeviceYear >= 2015) {
-        System.out.println("Установите версию приложения для андроид по ссылке");
-      }
+  public static void definingTheVersion(int Os, int DeviceYear) {
+
+    if (Os == 0 && DeviceYear < 2015) {
+      System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+    } else if (Os == 0 && DeviceYear >= 2015) {
+      System.out.println("Установите версию приложения для iOS по ссылке");
+    }
+    if (Os == 1 && DeviceYear < 2015) {
+      System.out.println("Установите облегченную версию приложения для андроид по ссылке");
+    } else if (Os == 1 && DeviceYear >= 2015) {
+      System.out.println("Установите версию приложения для андроид по ссылке");
     }
   }
 
-  public static void deliveryDays(int distance) {
+  public static void deliver(int distance) {
 
     int day = 0;
     if (distance >= 100) {
       System.out.println("доставки нет");
+      return;
     }
     if (distance < 20) {
       day = 1;
@@ -46,17 +46,17 @@ public class Main {
     }
   }
 
+
   public static void main(String[] args) {
     int year = 1988;
-    leapYear(year);
+    definingALeapYear(year);
 
     int os = 0;
-    int deviseYear = 2013;
-    applicationVersion(os, deviseYear);
+    int deviseYear = 2010;
+    definingTheVersion(os, deviseYear);
 
-    int distance = 50;
-    deliveryDays(distance);
-
+    int distance = 150;
+    deliver(distance);
 
   }
 
