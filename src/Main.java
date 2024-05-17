@@ -28,27 +28,25 @@ public class Main {
     }
   }
 
-  public static void deliver(int distance) {
+  public static int deliver(int distance) {
 
-    int day = 0;
+    int day = 1;
     if (distance >= 100) {
       System.out.println("доставки нет");
-      return;
     }
     if (distance < 20) {
-      day = 1;
       System.out.println("потребуется " + day + " дней доставки");
     }
     if (distance >= 20 && distance < 60) {
-      day = 2;
+      day = day + 1;
       System.out.println("потребуется  " + day + " дня доставки");
     }
     if (distance >= 60 && distance < 100) {
-      day = 3;
+      day = day + 2;
       System.out.println("потребуется  " + day + " дня доставки");
     }
+    return day;
   }
-
 
   public static void main(String[] args) {
     int year = 1988;
@@ -58,10 +56,12 @@ public class Main {
     int deviseYear = 2023;
     definingTheVersion(os, deviseYear);
 
-    int distance = 70;
+    int distance = 90;
     deliver(distance);
 
+
   }
+
 
 }
 
