@@ -12,7 +12,6 @@ public class Main {
       System.out.println("год " + year + " не високосный");
     }
   }
-
   public static void definingTheVersion(int Os, int DeviceYear) {
     int currentYear = LocalDate.now().getYear();
 
@@ -27,6 +26,7 @@ public class Main {
       System.out.println("Установите версию приложения для андроид по ссылке");
     }
   }
+
 
   public static int deliver(int distance) {
 
@@ -48,22 +48,49 @@ public class Main {
     return day;
   }
 
+  public static void definingTheVersion(int os1) {
+    switch (os1) {
+      case 0:
+        System.out.print("установите приложение для ios,");
+        break;
+      case 1:
+        System.out.print("установите приложение для аndroid,");
+        break;
+    }
+  }
+
+  public static void definitionTheYear(int deviseYear1) {
+    int currentYear1 = LocalDate.now().getYear();
+    if (deviseYear1 < currentYear1) {
+      System.out.print(" облегчённую версию ОС по ссылке");
+    } else {
+      System.out.print(" обычную версию ОС по ссылке");
+    }
+  }
+
   public static void main(String[] args) {
     int year = 1988;
     definingLeapYear(year);
 
     int os = 1;
-    int deviseYear = 2023;
+    int deviseYear = 2024;
     definingTheVersion(os, deviseYear);
 
     int distance = 90;
     deliver(distance);
 
-
+    int os1 = 0;
+    int deviseYear1 = 2019;
+    definingTheVersion(os1);
+    definitionTheYear(deviseYear1);
+    System.out.println();
   }
-
-
 }
+
+
+
+
+
 
 
 
