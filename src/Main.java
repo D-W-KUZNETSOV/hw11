@@ -82,8 +82,8 @@ public class Main {
 
     int os1 = 0;
     int deviseYear1 = 2024;
-    definingTheVersion(os);
-    definitionTheYear(deviseYear);
+    definingTheVersion(os1);
+    definitionTheYear(deviseYear1);
 
 
     System.out.println();
