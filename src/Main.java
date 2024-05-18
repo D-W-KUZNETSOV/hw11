@@ -51,10 +51,10 @@ public class Main {
   public static void definingTheVersion(int os1) {
     switch (os1) {
       case 0:
-        System.out.print("установите приложение для ios,");
+        System.out.print("установите приложение для ios");
         break;
       case 1:
-        System.out.print("установите приложение для аndroid,");
+        System.out.print("установите приложение для аndroid");
         break;
     }
   }
@@ -62,11 +62,12 @@ public class Main {
   public static void definitionTheYear(int deviseYear1) {
     int currentYear1 = LocalDate.now().getYear();
     if (deviseYear1 < currentYear1) {
-      System.out.print(" облегчённую версию ОС по ссылке");
+      System.out.print(" облегчённую версию ОС");
     } else {
-      System.out.print(" обычную версию ОС по ссылке");
+      System.out.print(" обычную версию ОС");
     }
   }
+
 
   public static void main(String[] args) {
     int year = 1988;
@@ -80,9 +81,11 @@ public class Main {
     deliver(distance);
 
     int os1 = 0;
-    int deviseYear1 = 2019;
-    definingTheVersion(os1);
-    definitionTheYear(deviseYear1);
+    int deviseYear1 = 2024;
+    definingTheVersion(os);
+    definitionTheYear(deviseYear);
+
+
     System.out.println();
   }
 }
