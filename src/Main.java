@@ -62,9 +62,9 @@ public class Main {
   public static void definitionTheYear(int deviseYear1) {
     int currentYear1 = LocalDate.now().getYear();
     if (deviseYear1 < currentYear1) {
-      System.out.print(" облегчённую версию ОС");
+      System.out.print(" облегчённую версию ОС по ссылке");
     } else {
-      System.out.print(" обычную версию ОС");
+      System.out.print(" обычную версию ОС по ссылке");
     }
   }
 
