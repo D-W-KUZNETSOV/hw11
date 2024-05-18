@@ -31,7 +31,7 @@ public class Main {
   public static int deliver(int distance) {
 
     int day = 1;
-    if (distance >= 100) {
+    if (distance<0||distance >= 100) {
       System.out.println("доставки нет");
     }
     if (distance < 20) {
@@ -77,7 +77,7 @@ public class Main {
     int deviseYear = 2024;
     definingTheVersion(os, deviseYear);
 
-    int distance = 90;
+    int distance = 70;
     deliver(distance);
 
     int os1 = 0;
