@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import javax.swing.DefaultListSelectionModel;
 
 public class Main {
 
@@ -31,20 +32,19 @@ public class Main {
   public static int deliver(int distance) {
 
     int day = 1;
-    if (distance<0||distance >= 100) {
+    if (distance < 0 || distance >= 100) {
       System.out.println("доставки нет");
     }
     if (distance < 20) {
       System.out.println("потребуется " + day + " дней доставки");
-    }
-    if (distance >= 20 && distance < 60) {
+    } else if (distance < 60) {
       day = day + 1;
       System.out.println("потребуется  " + day + " дня доставки");
-    }
-    if (distance >= 60 && distance < 100) {
+    } else if (distance < 100) {
       day = day + 2;
       System.out.println("потребуется  " + day + " дня доставки");
-    }
+    } else
+      return day;
     return day;
   }
 
@@ -77,7 +77,7 @@ public class Main {
     int deviseYear = 2024;
     definingTheVersion(os, deviseYear);
 
-    int distance = 70;
+    int distance = 50;
     deliver(distance);
 
     int os1 = 0;
